@@ -78,6 +78,7 @@ func SignIn(c *gin.Context) {
 		secure, // secure (true = HTTPS only)
 		true,   // httpOnly
 	)
+	println("accesstoken",token)
 
 	c.JSON(http.StatusOK, gin.H{
 		"message":      "Sign in successful",
