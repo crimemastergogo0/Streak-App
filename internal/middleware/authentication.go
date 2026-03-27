@@ -121,6 +121,7 @@ func AuthRootMiddleware() gin.HandlerFunc {
 }
 
 func IsUserClass() gin.HandlerFunc {
+	print("function called")
 	return func(c *gin.Context) {
 		classID := c.Param("classID")
 		classIDUint, err := strconv.ParseUint(classID, 10, 64)
