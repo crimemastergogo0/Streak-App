@@ -186,6 +186,7 @@ func SignUp(c *gin.Context) {
 // GET /user/classList/:id
 func ClassList(c *gin.Context) {
 	userID, err := c.Get("userId")
+	print("userid",userID)
 	if !err {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "User not authenticated"})
 		return
