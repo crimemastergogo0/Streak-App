@@ -27,6 +27,7 @@ func AuthUserMiddleware() gin.HandlerFunc {
 		}
 
 		token := strings.TrimSpace(strings.TrimPrefix(header, "Bearer "))
+		println("accesstoken1",token)
 
 		claims, err := utils.ValidateJWT(token, "user")
 		if err != nil {
